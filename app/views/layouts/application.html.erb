@@ -7,7 +7,7 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Treebook</a>
@@ -27,8 +27,12 @@
 		</div>
 	</div>
 	<div class="container">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<% flash.each do |type, message| %>
+		<div class="alert <%= flash_class type %> alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<p><%= message %></p>
+		</div>
+		<% end %>
 		<%= yield %>
 	</div>
 </body>
