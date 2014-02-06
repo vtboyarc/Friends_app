@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
 
   test "a user should enter a first name" do
   	user = User.new
@@ -31,12 +28,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "a user should have a profile name without spaces" do
-    user = User.new
-    user.profile_name = "Herp Derp Derp"
+    user = User.new(first_name: 'Rob', last_name: 'G', email: 'derp@derp.com')
+    user.password = user.password_confirmation = 'dfwfdwdfwf'
+
+    user.profile_name = "Herp Derp Lerp"
 
     assert !user.save
     assert !user.errors[:profile_name].empty?
     assert user.errors[:profile_name].include?("Must be formatted correctly.")
+  end
+
+  test "a user should have a correctly formatted profile name" do
+    user = User.new(first_name: 'Rob', last_name: 'G', email: 'derp@derp.com')
+    user.password = user.password_confirmation = 'dfwfdwdfwf'
+    user.profile_name = 'derpyderpderps'
+
+    assert user.valid?
+    assert user.save
   end
 
 end
