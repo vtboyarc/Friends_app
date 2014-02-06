@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class StatusesControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
 
   setup do
     @status = statuses(:one)
@@ -15,7 +14,8 @@ class StatusesControllerTest < ActionController::TestCase
 
   test "should get new" do
     get :new
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
   end
 
   test "should create status" do
