@@ -10,6 +10,7 @@ class StatusesControllerTest < ActionController::TestCase
     post :create, status: { content: "Hello"}
     assert_response :redirect
     assert_redirected_to new_user_session_path
+    assert true
   end
   
   test "should get index" do
