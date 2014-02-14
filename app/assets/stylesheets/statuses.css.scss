@@ -5,24 +5,22 @@
 .status {
 	border-bottom: solid 1px #CCC;
 	padding: 10px;
-}
 
-.status p {
-	margin: 4px 0;
+	.content {
+		margin-left: 10px;
+	}
+	p {
+		margin: 4px 0;
+	}
 }
 
 .admin {
 	display: none;
 }
 
-.status.hover {
+.status:hover {
 	background: #FAFAFA;
-}
-
-.status.hover .admin {
-	display: inline;
-}
-
-.status .content {
-	margin-left: 10px;
+	.admin {
+		display: inline;
+	}
 }
