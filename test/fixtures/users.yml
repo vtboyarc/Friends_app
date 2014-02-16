@@ -8,3 +8,8 @@ rob:
   last_name: "Goddard"
   email: "derp@dfdf.com"
   profile_name: "Derpy"
+mike:
+  first_name: "Mike"
+  last_name: "The Frog"
+  email: "mikethefrog@treehouse.com"
+  profile_name: "mikethefrog"
