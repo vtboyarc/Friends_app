@@ -1,5 +1,6 @@
 class StatusesController < ApplicationController
-
+  before_filter :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
+  
   # GET /statuses
   # GET /statuses.json
   def index
@@ -14,20 +15,17 @@ class StatusesController < ApplicationController
 
   # GET /statuses/new
   def new
-    authenticate_user!
     @status = Status.new
   end
 
   # GET /statuses/1/edit
   def edit
-    authenticate_user!
     set_status
   end
 
   # POST /statuses
   # POST /statuses.json
   def create
-    authenticate_user!
     @status = current_user.statuses.new(status_params)
 
     respond_to do |format|
@@ -44,7 +42,6 @@ class StatusesController < ApplicationController
   # PATCH/PUT /statuses/1
   # PATCH/PUT /statuses/1.json
   def update
-    authenticate_user!
     @status = current_user.statuses.find(params[:id])
     if (params[:status])
       params[:status].delete(:user_id) if params[:status].has_key?(:user_id)
