@@ -93,7 +93,8 @@ class StatusesControllerTest < ActionController::TestCase
     assert_equal assigns(:status).user_id, users(:rob).id
   end
 
-  test "should destroy status" do
+  test "should destroy status if logged in" do
+    sign_in users(:rob)
     assert_difference('Status.count', -1) do
       delete :destroy, id: @status
     end
