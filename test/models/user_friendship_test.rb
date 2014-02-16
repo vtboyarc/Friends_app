@@ -7,7 +7,7 @@ class UserFriendshipTest < ActiveSupport::TestCase
 
   test "creating a friendship works without raising an exception" do
     assert_nothing_raised do
-      UserFriendship.create user_id: users(:rob).id, friend_id: users(:mike).id
+      UserFriendship.create user: users(:rob), friend: users(:mike)
     end
   end
 end
