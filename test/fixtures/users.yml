@@ -3,7 +3,8 @@ one:
   last_name: "Goddard"
   email: "dfwfd@dfdf.com"
   encrypted_password: "$2a$10$8uCZ9wCTsFoqa0aIfpssne4qtchcpqhepdU5WylZwh4GBAkgFWEYe"
-
+  profile_name: "robgoddard"
+  
 rob:
   first_name: "Rob"
   last_name: "Goddard"
