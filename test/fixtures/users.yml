@@ -2,7 +2,7 @@ one:
   first_name: "Rob"
   last_name: "Goddard"
   email: "dfwfd@dfdf.com"
-  encrypted_password: "$2a$10$8uCZ9wCTsFoqa0aIfpssne4qtchcpqhepdU5WylZwh4GBAkgFWEYe"
+  encrypted_password: "$2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq"
   profile_name: "robgoddard"
   
 rob:
@@ -10,6 +10,7 @@ rob:
   last_name: "Goddard"
   email: "derp@dfdf.com"
   profile_name: "Derpy"
+  encrypted_password: "$2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq"
 
 mike:
   first_name: "Mike"
