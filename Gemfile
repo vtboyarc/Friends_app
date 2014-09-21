@@ -19,6 +19,7 @@ end
 
 gem 'devise'
 gem 'simple_form'
+gem 'state_machine'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
