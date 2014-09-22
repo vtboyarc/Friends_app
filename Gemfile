@@ -19,6 +19,7 @@ gem 'state_machine'
 gem 'draper', '~> 1.0'
 gem 'js-routes'
 gem 'rails_12factor'
+gem 'pony'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

@@ -71,6 +71,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
+    pony (1.11)
+      mail (>= 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -155,6 +157,7 @@ DEPENDENCIES
   jquery-rails
   js-routes
   pg
+  pony
   rails (= 4.0.2)
   rails_12factor
   sass-rails (~> 4.0.0)
