@@ -1,1 +1,1 @@
-Facebook look alike project, following along with Rails isntructional videos from Treehouse
+Spare time project, Facebook-ish site

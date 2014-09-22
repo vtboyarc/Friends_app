@@ -18,3 +18,4 @@
 #Ignore DSStore
 .DS_Store
 
+.env
